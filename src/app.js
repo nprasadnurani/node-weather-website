@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 
 
 hbs.registerPartials(path.join(__dirname,'../template/partials'))
@@ -112,6 +113,6 @@ app.get('/help',(req,res) => {
 
  
 
-app.listen(3000,() => {
+app.listen(port,() => {
     console.log('Server is up on port 3000')
 })
